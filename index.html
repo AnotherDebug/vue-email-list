@@ -31,8 +31,8 @@
 
         <h1>Elenco indirizzi Email:</h1>
 
-        <ol class="my-4">
-            <li v-for="(email, index) in emails">{{displayEmails(index)}}</li>
+        <ol v-if="this.emails.length === this.emailNums" class="my-4">
+            <li v-for="email in emails">{{email}}</li>
         </ol>
     </div>
 

@@ -23,7 +23,6 @@ createApp({
 
       emails: [],
       emailNums: 10,
-      counter:0
     };
   },
 
@@ -38,10 +37,6 @@ createApp({
        .then((response) => {
          this.emails.push(response.data.response);
          console.log(this.emails);
-         this.counter++;
-         if(this.counter === this.emailNums) {
-          this.displayEmails();
-         }
        })
        .catch((error) => {
          console.log(error);
@@ -50,10 +45,6 @@ createApp({
 
 
     },
-
-    displayEmails(index) {
-      return this.emails[index];
-    }
 
   },
 
